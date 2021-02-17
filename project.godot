@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="One-screen-platformer"
+run/main_scene="res://Platformer.tscn"
 config/icon="res://icon.png"
 
 [rendering]
