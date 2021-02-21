@@ -12,7 +12,7 @@ script = ExtResource( 3 )
 [node name="TileMap" parent="." instance=ExtResource( 1 )]
 scale = Vector2( 0.5, 0.5 )
 cell_size = Vector2( 64, 64 )
-tile_data = PoolIntArray( 786461, 6, 0, 786463, 17, 0, 786465, 17, 0, 786467, 7, 0, 917504, 11, 0, 917506, 12, 0, 917508, 12, 0, 917510, 12, 0, 917512, 0, 0, 917520, 6, 0, 917522, 17, 0, 917524, 17, 0, 917526, 7, 0, 983040, 2, 0, 983041, 2, 0, 983042, 2, 0, 983043, 2, 0, 983044, 2, 0, 983045, 2, 0, 983046, 2, 0, 1048584, 2, 0, 1114112, 2, 0, 1114113, 2, 0, 1114114, 2, 0, 1114115, 2, 0, 1114116, 2, 0, 1114117, 2, 0, 1114118, 2, 0, 1114120, 2, 0 )
+tile_data = PoolIntArray( 196606, 2, 0, 327678, 2, 0, 458750, 2, 0, 393239, 11, 0, 393241, 12, 0, 393243, 13, 0, 458781, 10, 0, 589822, 2, 0, 524319, 10, 0, 720894, 2, 0, 655396, 10, 0, 851966, 2, 0, 786461, 6, 0, 786463, 17, 0, 786465, 17, 0, 786467, 7, 0, 983038, 2, 0, 917504, 11, 0, 917506, 12, 0, 917508, 12, 0, 917510, 12, 0, 917512, 0, 0, 917520, 6, 0, 917522, 17, 0, 917524, 17, 0, 917526, 7, 0, 983040, 2, 0, 983041, 2, 0, 983042, 2, 0, 983043, 2, 0, 983044, 2, 0, 983045, 2, 0, 983046, 2, 0, 1048584, 2, 0, 1114112, 2, 0, 1114113, 2, 0, 1114114, 2, 0, 1114115, 2, 0, 1114116, 2, 0, 1114117, 2, 0, 1114118, 2, 0, 1114120, 2, 0 )
 
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( 59.4641, 373.774 )
@@ -25,11 +25,16 @@ ACCEL = 135
 FRICTION = 610
 JUMP = 300
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+limit_left = 0
+limit_right = 1200
+editor_draw_limits = true
+
 [node name="Doom" type="Area2D" parent="."]
 position = Vector2( 512, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Doom"]
-position = Vector2( -70.7107, 608.112 )
-scale = Vector2( 80, 1 )
+position = Vector2( 212.805, 605.442 )
+scale = Vector2( 200, 1 )
 shape = SubResource( 1 )
 [connection signal="body_entered" from="Doom" to="." method="_on_Doom_body_entered"]
