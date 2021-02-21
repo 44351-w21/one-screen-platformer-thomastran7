@@ -2,13 +2,21 @@
 
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Platformer.gd" type="Script" id=3]
 [ext_resource path="res://Goal.tscn" type="PackedScene" id=4]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+
+
+func _on_Doom_body_entered(body):
+	$Player.position = $Position2D.position
+"
+
+[sub_resource type="RectangleShape2D" id=2]
 
 [node name="Platformer" type="Node2D"]
-script = ExtResource( 3 )
+script = SubResource( 1 )
 
 [node name="TileMap" parent="." instance=ExtResource( 1 )]
 scale = Vector2( 0.5, 0.5 )
@@ -37,8 +45,8 @@ position = Vector2( 512, 0 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Doom"]
 position = Vector2( 212.805, 605.442 )
 scale = Vector2( 200, 1 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Goal" parent="." instance=ExtResource( 4 )]
-position = Vector2( 779.352, 161.225 )
+position = Vector2( 782.352, 147.225 )
 [connection signal="body_entered" from="Doom" to="." method="_on_Doom_body_entered"]
