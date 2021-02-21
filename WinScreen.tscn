@@ -34,9 +34,10 @@ __meta__ = {
 [node name="Win" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -600.0
-margin_right = 600.0
-margin_bottom = 138.0
+margin_left = -659.46
+margin_top = 2.37842
+margin_right = 540.54
+margin_bottom = 140.378
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0.0627451, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0.0509804, 0.996078, 0.905882, 1 )
