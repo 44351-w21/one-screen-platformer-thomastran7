@@ -8,9 +8,8 @@
 script/source = "extends Node2D
 
 
-
 func _on_Doom_body_entered(body):
-	$Player.position = $Position2D.position
+	get_tree().change_scene(\"res://LoseScreen.tscn\")
 "
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -43,7 +42,7 @@ editor_draw_limits = true
 position = Vector2( 512, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Doom"]
-position = Vector2( 212.805, 605.442 )
+position = Vector2( 212.805, 624.13 )
 scale = Vector2( 200, 1 )
 shape = SubResource( 2 )
 

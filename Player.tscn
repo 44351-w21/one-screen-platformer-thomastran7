@@ -30,7 +30,10 @@ height = 19.7139
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 5 )
-JUMP = 250
+GRAVITY = 210
+MAX_SPEED = 320
+ACCEL = 150
+FRICTION = 620
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
