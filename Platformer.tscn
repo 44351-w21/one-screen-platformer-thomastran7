@@ -31,7 +31,6 @@ GRAVITY = 405
 MAX_SPEED = 350
 ACCEL = 135
 FRICTION = 610
-JUMP = 300
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 limit_left = 0
